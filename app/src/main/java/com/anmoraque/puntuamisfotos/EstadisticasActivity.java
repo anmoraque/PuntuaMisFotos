@@ -27,11 +27,11 @@ public class EstadisticasActivity extends AppCompatActivity {
         TextView media4 = findViewById(R.id.media4);
         TextView media5 = findViewById(R.id.media5);
 
-        foto1 = GestionPreferencias.leerPreferenciaFoto1(this);
-        foto2 = GestionPreferencias.leerPreferenciaFoto2(this);
-        foto3 = GestionPreferencias.leerPreferenciaFoto3(this);
-        foto4 = GestionPreferencias.leerPreferenciaFoto4(this);
-        foto5 = GestionPreferencias.leerPreferenciaFoto5(this);
+        foto1 = GestionPreferencias.leerPreferenciaFoto(this, 0+"");
+        foto2 = GestionPreferencias.leerPreferenciaFoto(this, 1+"");
+        foto3 = GestionPreferencias.leerPreferenciaFoto(this, 2+"");
+        foto4 = GestionPreferencias.leerPreferenciaFoto(this, 3+"");
+        foto5 = GestionPreferencias.leerPreferenciaFoto(this, 4+"");
 
         media1.setText(foto1+"");
         media2.setText(foto2+"");

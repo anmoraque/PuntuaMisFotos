@@ -84,29 +84,19 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Has dado de puntuación un " + n_puntuacion, Toast.LENGTH_SHORT).show();
 
         //Paso las fotos automaticamente cada vez que puntua
+        //Cambio de foto
+
+        this.viewPager2.setCurrentItem(n_foto+1);
+
+            //Guardamos n_foto con su n_puntuacion
+        GestionPreferencias.guardarPreferenciafoto(this, n_foto+"", n_puntuacion+"");
+
+
         if ((n_foto + 1)==this.adapterFragmentos.getItemCount())
         {
             //Pongo un Toast avisando que has terminado de puntuar todas
             //Toast.makeText(this, "Has terminado de puntuar todas las fotos", Toast.LENGTH_LONG).show();
             irAEstadisticas ();
-        } else {
-            //Cambio de foto
-            this.viewPager2.setCurrentItem(n_foto+1);
-
-            //Guardamos n_foto con su n_puntuacion
-            switch (n_foto){
-                case 0: GestionPreferencias.guardarPreferenciaFoto1(this, n_puntuacion+"");
-                    break;
-                case 1: GestionPreferencias.guardarPreferenciaFoto2(this, n_puntuacion+"");
-                    break;
-                case 2: GestionPreferencias.guardarPreferenciaFoto3(this, n_puntuacion+"");
-                    break;
-                case 3: GestionPreferencias.guardarPreferenciaFoto4(this, n_puntuacion+"");
-                    break;
-                case 4: GestionPreferencias.guardarPreferenciaFoto5(this, n_puntuacion+"");
-                    break;
-            }
-
         }
 
     }
