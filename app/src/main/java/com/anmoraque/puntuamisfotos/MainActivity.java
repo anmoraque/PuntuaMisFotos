@@ -17,6 +17,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import com.anmoraque.puntuamisfotos.animacion.DepthPageTransformer;
+import com.anmoraque.puntuamisfotos.animacion.MiAnimacionEntreFragments;
+import com.anmoraque.puntuamisfotos.animacion.ZoomOutPageTransformer;
 import com.anmoraque.puntuamisfotos.util.GestionPreferencias;
 import java.util.List;
 
@@ -45,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+       // viewPager2.setPageTransformer(new ZoomOutPageTransformer());
+       viewPager2.setPageTransformer(new MiAnimacionEntreFragments());
+        //viewPager2.setPageTransformer(new DepthPageTransformer());
     }
     //Creo el menu personalizado
     public boolean onCreateOptionsMenu(Menu menu) {
